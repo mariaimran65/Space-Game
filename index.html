@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>space game</title>
+    <style>
+      #gameApp {
+        background-image: url("space.jpg");
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+      }
+      .btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0;
+        width: 187px;
+        height: 57px;
+        border-radius: 21px;
+        background: rgb(6, 6, 47);
+        color: white;
+        border: none;
+        font-size: 30px;
+      }
+      .hidden {
+        display: none;
+      }
+      #scoreBox,
+      #lifeBox {
+        position: absolute;
+        top: 0px;
+        border-radius: 10px;
+        left: 20px;
+        background-color: rgb(23, 23, 77);
+        padding: 20px;
+        color: white;
+      }
+      #lifeBox {
+        left: 80px;
+      }
+      #player {
+        width: 100px;
+        position: absolute;
+        bottom: 0;
+      }
+      .missile {
+        width: 60px;
+        position: absolute;
+      }
+      .enemy {
+        width: 70px;
+        height: 60px;
+        position: absolute;
+        border-radius: 40px;
+
+        /* bottom: 0; */
+      }
+      #gameOverScreen {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameApp">
+      <div id="splashScreen">
+        <button onclick="startGame()" class="btn">Start Game</button>
+      </div>
+      <div id="playScreen" class="hidden">
+        <img src="ship.png" alt="" id="player" />
+        <h1 id="scoreBox">0</h1>
+        <h1 id="lifeBox">15</h1>
+      </div>
+      <div id="gameOverScreen" class="hidden"><h1>Game Over</h1></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
